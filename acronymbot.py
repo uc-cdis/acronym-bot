@@ -30,7 +30,6 @@ e.g., @acronym-bot expand CDIS
           channel_id = data['channel']
           user = data['user']
 
-          # try to find acronym in the list stored in the github cdis-wiki repo
           link = "https://raw.githubusercontent.com/uc-cdis/acronym-bot/master/acronyms.txt"
           r = requests.get(link)
           acronyms = json.loads(r.text)
