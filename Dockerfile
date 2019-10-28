@@ -19,6 +19,8 @@ RUN python -m pip install -r requirements.txt \
     && COMMIT=`git rev-parse HEAD` && echo "COMMIT=\"${COMMIT}\"" >acronymbot/version_data.py \
     && VERSION=`git describe --always --tags` && echo "VERSION=\"${VERSION}\"" >>acronymbot/version_data.py 
 
+WORKDIR /opt/ctds/acronymbot/acronymbot
+
 USER acronymbotuser
 
-ENTRYPOINT ["sh","-c","python3.6 /opt/ctds/acronymbot/acronymbot/acronymbot.py"]
+ENTRYPOINT ["sh","-c","python3.6 acronymbot.py"]
