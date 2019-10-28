@@ -10,7 +10,7 @@ setup(
     version=version,
     description="A Slack Bot to expand CTDS acronyms",
     license="GPLv3",
-    url="https://github.com/uc-cdis/not_in_a_repo_yet/acronym-bot",
+    url="https://github.com/uc-cdis/acronym-bot",
     classifiers=[
         "Intended Audience :: Developers",
         "Intended Audience :: System Administrators",
