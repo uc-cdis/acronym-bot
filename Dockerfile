@@ -1,10 +1,11 @@
-FROM quay.io/cdis/py27base:pybase2-1.0.2
+FROM quay.io/cdis/python-nginx:latest
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-# the www-data user is created in the parent image, just reusing it here
+RUN adduser -D -g '' acronymbotuser
+
 RUN mkdir -p /opt/ctds/acronymbot \
-    && chown www-data /opt/ctds/acronymbot
+    && chown acronymbotuser /opt/ctds/acronymbot
 
 COPY . /acronymbot
 WORKDIR /acronymbot
@@ -14,5 +15,7 @@ RUN python -m pip install -r requirements.txt \
     && VERSION=`git describe --always --tags` && echo "VERSION=\"${VERSION}\"" >>acronymbot/version_data.py 
 
 WORKDIR /opt/ctds/acronymbot
+
+USER acronymbotuser
 
 CMD /dockerrun.sh
