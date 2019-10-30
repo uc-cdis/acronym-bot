@@ -8,7 +8,8 @@ logging.basicConfig(level=logging.INFO)
 log = logging.getLogger(__name__)
 
 slack_token = os.environ["SLACK_API_TOKEN"]
-rtmclient = slack.RTMClient(token=slack_token)
+# override base_url to use whitelisted domain
+rtmclient = slack.RTMClient(token=slack_token, base_url='https://cdis.slack.com/api/', proxy='http://cloud-proxy.internal.io:3128')
 
 @slack.RTMClient.run_on(event='message')
 def find_acronym(**payload):
