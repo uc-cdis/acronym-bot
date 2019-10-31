@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# check if acronyms.txt contains a valid json structure
+cat acronyms.txt  | python -m json.tool
+RC=$?
+
+if [ $RC -ne 0 ]; then
+  echo "fix your json!"
+  exit 1
+fi
