@@ -31,7 +31,8 @@ e.g., @acronym-bot expand CDIS
           channel_id = data['channel']
           user = data['user']
 
-          link = "https://raw.githubusercontent.com/uc-cdis/acronym-bot/master/acronyms.txt"
+          # need to point to raw data in the master branch once the fully automated CI is set up
+          link = "https://raw.githubusercontent.com/uc-cdis/acronym-bot/develop/acronyms.txt"
           r = requests.get(link)
           acronyms = json.loads(r.text)
           if search_term in acronyms.keys():
