@@ -1,5 +1,7 @@
 # acronym-bot
 
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/) [![GitHub contributors](https://img.shields.io/github/contributors/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/contributors/)
+
 **Why**: There are too many acronyms. The majority of them represent the name of entities (non-profit organizations, professional associations, research institutes, governmental agencies, etc.) whereas some of them are related to biomedicine jargons and others are associated with data security terminology (e.g., FISMA, HIPAA, PHI, PII, etc.). That is why there is a need for a friendly tool that provides the meaning of such acronyms.
 
 **What**: The acronym-bot is a Slack bot that can be invited to any channel to help expand acronyms.
@@ -18,9 +20,9 @@ And wait for a response like:
 > NHLBI stands for: National Heart, Lung, and Blood Institute
 
 ### Adding new acronyms
-Just edit the `acronyms.txt` file (add as many new acronyms as you want!), create a PR, get someone else to review and then merge the changes.
+Just edit the `acronyms.txt` file (add as many new acronyms as you want!), create a PR, get someone else to review and then merge the changes. This will be picked up by the bot immediately, there is no need for any reload / restart.
 
-This will be picked up by the bot immediately, there is no need for any reload / restart.
+:warning: It is recommended that the collaborators run: `git config core.hooksPath .githooks` to enable the pre-commit hook that validates the JSON structure of `acronyms.txt`.
 
 Other operational stuff:
 --
