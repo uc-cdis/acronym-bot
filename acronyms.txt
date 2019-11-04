@@ -1,4 +1,5 @@
 {
+        "ACCESS": "Adding Consortium ConstituEntS for Studies",
 	"ACCOuNT": "African American Cardiovascular pharmacogenetic CONsorTium",
 	"ATO": "Authority to Operate",
 	"AWG": "Analysis Working Group",
@@ -49,6 +50,7 @@
 	"KCBD": "Knapp Center for Biomedical Discovery at UChicago",
 	"MJFF": "Michael J Fox Foundation",
 	"NIAD": "National Institute of Allergy and Infectious Diseases",
+        "NDE": "NIAID Data Ecosystem",
         "NDH": "NIAID Data Hub",
 	"NHLBI": "National Heart, Lung, and Blood Institute",
 	"NHGRI": "National Human Genome Research Institute",
@@ -77,6 +79,7 @@
 	"SCA": "Security Control Assessment",
 	"TARGET": "Therapeutically Applicable Research to Generate Effective Treatments",
 	"TCGA": "The Cancer Genome Atlas",
+        "TB": "NIAID Data Ecosystem tuberculosis environment",
 	"TP": "Trusted Partnership",
 	"VA": "US Department of Veterans Affairs",
 	"NSA": "*N* CFS, *S* TAGE, *A* NVIL",
