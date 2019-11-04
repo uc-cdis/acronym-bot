@@ -27,7 +27,7 @@ e.g., @acronym-bot expand CDIS
           """
         else:
           # identify acronym
-          search_term = data['text'].split('expand')[1].strip().lower()
+          search_term = data['text'].split('expand')[1].strip()
           channel_id = data['channel']
           user = data['user']
 
@@ -36,7 +36,7 @@ e.g., @acronym-bot expand CDIS
           r = requests.get(link)
           acronyms = json.loads(r.text)
           for k, v in acronyms.items():
-            if search_term == k.lower():
+            if search_term.lower() == k.lower():
               bot_reply = '{} stands for: {}'.format(search_term, v)
           if bot_reply == None:
             bot_reply = 'Sorry :sadpanda: I couldn\'t find {} in the list of acronyms.'.format(search_term)
