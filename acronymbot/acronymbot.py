@@ -35,6 +35,7 @@ e.g., @acronym-bot expand CDIS
           link = "https://raw.githubusercontent.com/uc-cdis/acronym-bot/develop/acronyms.txt"
           r = requests.get(link)
           acronyms = json.loads(r.text)
+          bot_reply = None
           for k, v in acronyms.items():
             if search_term.lower() == k.lower():
               bot_reply = '{} stands for: {}'.format(search_term, v)
