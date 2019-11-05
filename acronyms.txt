@@ -19,7 +19,7 @@
 	"CGHub": "Cancer Genomics Hub at UC Santa Cruz",
 	"CI": "Computation Institute at UChicago",
 	"CR": "Cloud Resource of NCI CRDC",
-	"CRDC": "NCI Cancer Research Data Commons"
+	"CRDC": "NCI Cancer Research Data Commons",
 	"CRDW": "Clinical Research Data Warehouse at UChicago",
 	"CRF": "Cancer Research Foundation",
 	"CRI": "Center for Research Informatics at UChicago",
