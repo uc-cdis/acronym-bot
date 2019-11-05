@@ -2,6 +2,7 @@
 	"AAC": "Astronomy & Astrophysics Center",
 	"ACCESS": "Adding Consortium ConstituEntS for Studies",
 	"ACCOuNT": "African American Cardiovascular pharmacogenetic CONsorTium",
+	"ALCHEMIST": "Adjuvant Lung Cancer Enrichment Marker Identification and Sequencing Trials",
 	"ATO": "Authority to Operate",
 	"AWG": "Analysis Working Group",
 	"BAM": "Binary Alignment Mapping",
