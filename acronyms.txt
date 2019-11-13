@@ -72,6 +72,7 @@
 	"NCBI": "National Center for Biotechnology Information",
 	"NOAA": "National Oceanic and Atmospheric Administration",
 	"OCC": "Open Commons Consortium",
+	"OCCPR": "Office of Cancer Clinical Proteomics Research",
 	"OICR": "Ontario Institute for Cancer Research",
 	"OSDC": "Open Science Data Cloud",
 	"PDC": "(Bionimbus) Protected Data Cloud or Proteomic Data Commons (a data node of the NCI CRDC)",
