@@ -46,7 +46,7 @@
 	"GenoMEL": "The Melanoma Genetics Consortium",
 	"GMKF": "Gabriella Miller Kids First",
 	"HIPAA": "Federal Health Insurance Portability and Accountability Act",
-	"IBDGC": "Irritable Bowel Disease Genetics Consortium",
+	"IBDGC": "Inflammatory Bowel Disease Genetics Consortium",
 	"IGSB": "Institute for Genomics Systems Biology at UChicago",
 	"ICGC": "International Cancer Genome Consortium",
 	"IDC": "Imaging Data Commons",
