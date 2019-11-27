@@ -39,7 +39,7 @@
 	"eRA": "NIH Electronic Research Administration",
 	"ERB": "Engineering Review Board",
 	"FedRAMP": "Federal Risk and Authorization Management Program",
-	"FISMA": "Federal Information Security Management Act",
+	"FISMA": "Federal Information Security Modernization Act",
 	"GA4GH": "The Global Alliance for Genomics and Health",
 	"GCP": "Google Cloud Platform",
 	"GDC": "NCI Genomic Data Commons",
