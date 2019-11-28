@@ -1,6 +1,8 @@
 # acronym-bot
 
-[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/) [![GitHub contributors](https://img.shields.io/github/contributors/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/contributors/)
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+[![Generic badge](https://img.shields.io/badge/Contributors-2-green.svg)](https://shields.io/)
+[![GitHub contributors](https://img.shields.io/github/contributors/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/contributors/)
 
 **Why**: There are too many acronyms. The majority of them represent the name of entities (non-profit organizations, professional associations, research institutes, governmental agencies, etc.) whereas some of them are related to biomedicine jargons and others are associated with data security terminology (e.g., FISMA, HIPAA, PHI, PII, etc.). That is why there is a need for a friendly tool that provides the meaning of such acronyms.
 
