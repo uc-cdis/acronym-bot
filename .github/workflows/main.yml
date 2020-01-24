@@ -11,9 +11,6 @@ jobs:
     steps:
       - name: Identify previous release
         id: previous_release
-        uses: actions/github-script@0.2.0
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
         run: echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
       - name: Bump release version
         id: bump_version
