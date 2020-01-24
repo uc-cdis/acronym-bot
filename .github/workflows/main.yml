@@ -1,0 +1,36 @@
+name: Release awesomeness
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  build-and-run:
+    name: Build and Run
+    runs-on: ubuntu-latest
+    steps:
+      - name: Identify previous release
+        id: previous_release
+        run: |
+          echo $GITHUB_REF
+          echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
+      - name: Bump release version
+        id: bump_version
+        uses: christian-draeger/increment-semantic-version@1.0.0
+        with:
+          current-version: ${{ steps.previous_release.outputs.VERSION }}
+          version-fragment: 'bug'
+      - name: Checkout repo
+        uses: actions/checkout@v1
+        with:
+          ref: develop      
+      - name: fix remote
+        run: git remote set-url origin https://github.com/uc-cdis/acronym-bot.git
+      - name: Install Gen3 release-helper
+        run: |
+          pip install wheel
+          pip install --user --editable git+https://github.com/uc-cdis/release-helper.git@master#egg=gen3git
+          python -m gen3git --github-access-token ${{ secrets.MC_GITHUB_TOKEN }} tag ${{ steps.bump_version.outputs.next-version }}
+          python -m gen3git --github-access-token ${{ secrets.MC_GITHUB_TOKEN }} --from-tag ${{ steps.previous_release.outputs.VERSION }} release
+          python -m gen3git --github-access-token ${{ secrets.MC_GITHUB_TOKEN }} --from-tag ${{ steps.previous_release.outputs.VERSION }} gen --markdown
