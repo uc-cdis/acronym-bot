@@ -18,6 +18,10 @@ jobs:
         with:
           current-version: ${{ steps.previous_release.outputs.VERSION }}
           version-fragment: 'bug'
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        with:
+          ref: chore/test
       - name: Install Gen3 release-helper
         run: |
           pip install wheel
