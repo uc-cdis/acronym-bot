@@ -35,6 +35,7 @@ jobs:
           python -m gen3git --github-access-token ${{ secrets.MC_GITHUB_TOKEN }} --from-tag ${{ steps.previoustag.outputs.tag }} gen --markdown
           cat release_notes.md
       - name: Create release
+        uses: actions/checkout@v1
         uses: ncipollo/release-action@v1
         with:
           artifacts: "release.tar.gz,foo/*.txt"
