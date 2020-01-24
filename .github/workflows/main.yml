@@ -33,3 +33,10 @@ jobs:
           python -m gen3git --github-access-token ${{ secrets.MC_GITHUB_TOKEN }} tag ${{ steps.bump_version.outputs.next-version }}
           python -m gen3git --github-access-token ${{ secrets.MC_GITHUB_TOKEN }} --from-tag ${{ steps.previoustag.outputs.tag }} release
           python -m gen3git --github-access-token ${{ secrets.MC_GITHUB_TOKEN }} --from-tag ${{ steps.previoustag.outputs.tag }} gen --markdown
+	  cat release_notes.md
+      - name: Create release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "release.tar.gz,foo/*.txt"
+          bodyFile: "release_notes.md"
+          token: ${{ secrets.MC_GITHUB_TOKEN }}
