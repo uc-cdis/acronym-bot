@@ -22,10 +22,9 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
         with:
-          ref: chore/test
+          ref: master
       - name: Install Gen3 release-helper
-        run: echo ${{ steps.bump_version.outputs.next-version }}
-#        run: |
-#          pip install wheel
-#          pip install --user --editable git+https://github.com/uc-cdis/release-helper.git@master#egg=gen3git
-#          python -m gen3git tag ${{ steps.bump_version.outputs.next-version }}
+        run: |
+          pip install wheel
+          pip install --user --editable git+https://github.com/uc-cdis/release-helper.git@master#egg=gen3git
+          python -m gen3git tag ${{ steps.bump_version.outputs.next-version }}
