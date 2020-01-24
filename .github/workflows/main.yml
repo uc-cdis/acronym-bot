@@ -23,6 +23,8 @@ jobs:
         uses: actions/checkout@v1
         with:
           ref: develop      
+      - name: fix remote
+        run: git remote set-url origin https://github.com/uc-cdis/acronym-bot.git
       - name: Install Gen3 release-helper
         run: |
           pip install wheel
