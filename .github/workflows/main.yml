@@ -12,7 +12,9 @@ jobs:
     steps:
       - name: Identify previous release
         id: previous_release
-        run: echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
+        run: |
+          echo $GITHUB_REF
+          echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
       - name: Bump release version
         id: bump_version
         uses: christian-draeger/increment-semantic-version@1.0.0
