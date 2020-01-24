@@ -1,13 +1,14 @@
-name: Release
-
+name: Hello Testing
+# This workflow is triggered on pushes to the repository.
 on: 
   push:
     tags:
     - '*'
 
 jobs:
-  build:
-    runs-on: ubuntu-18.04
+  build-and-run:
+    name: Build and Run
+    runs-on: ubuntu-latest
     steps:
       - name: Identify previous release
         id: previous_release
