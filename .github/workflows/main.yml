@@ -17,7 +17,7 @@ jobs:
         uses: christian-draeger/increment-semantic-version@1.0.0
         with:
           current-version: ${{ steps.previous_release.outputs.VERSION }}
-          version-fragment: 'feature'
+          version-fragment: 'bug'
       - name: Install Gen3 release-helper
         run: |
           pip install --user --editable git+https://github.com/uc-cdis/release-helper.git@master#egg=gen3git
