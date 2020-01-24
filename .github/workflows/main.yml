@@ -18,6 +18,8 @@ jobs:
           GITHUB_TOKEN: "${{ secrets.MC_GITHUB_TOKEN }}"
       - name: fix remote
         run: git remote set-url origin https://github.com/uc-cdis/acronym-bot.git
+      - name: switch to develop branch
+        run: git checkout develop
       - name: Bump release version
         id: bump_version
         uses: christian-draeger/increment-semantic-version@1.0.0
