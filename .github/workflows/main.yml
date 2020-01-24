@@ -9,12 +9,20 @@ jobs:
   build:
     runs-on: ubuntu-18.04
     steps:
-      - name: Extract tag name
-        id: tag
+      - name: Identify previous release
+        id: previous_release
         uses: actions/github-script@0.2.0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             return context.payload.ref.replace(/\/refs\/tags\//, '');
-      - name: Echo
-        run: echo ${{ steps.tag.outputs.result }}
+      - name: Bump release version
+        id: bump_version
+        uses: christian-draeger/increment-semantic-version@1.0.0
+        with:
+          current-version: ${{ steps.previous_release.outputs.result }}
+          version-fragment: 'feature'
+      - name: Install Gen3 release-helper
+        run: |
+          pip install --user --editable git+https://github.com/uc-cdis/release-helper.git@master#egg=gen3git
+          gen3git tag ${{ steps.bump_version.outputs.next-version }}
