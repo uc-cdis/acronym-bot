@@ -10,6 +10,12 @@ jobs:
     name: Build and Run
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v1
+        with:
+          ref: develop      
+      - name: fix remote
+        run: git remote set-url origin https://github.com/uc-cdis/acronym-bot.git
       - name: Identify previous release
         id: previous_release
         run: echo ::set-output name=VERSION::$(ls -t1 .git/refs/tags |  head -n 1)
@@ -19,14 +25,11 @@ jobs:
         with:
           current-version: ${{ steps.previous_release.outputs.VERSION }}
           version-fragment: 'bug'
-      - name: Checkout repo
-        uses: actions/checkout@v1
-        with:
-          ref: develop      
-      - name: fix remote
-        run: git remote set-url origin https://github.com/uc-cdis/acronym-bot.git
       - name: Install Gen3 release-helper
+        run: |
         run: |
           pip install wheel
           pip install --user --editable git+https://github.com/uc-cdis/release-helper.git@master#egg=gen3git
-          python -m gen3git tag ${{ steps.bump_version.outputs.next-version }}
+          python -m gen3git --github-access-token ${{ secrets.MC_GITHUB_TOKEN }} tag ${{ steps.bump_version.outputs.next-version }}
+          python -m gen3git --github-access-token ${{ secrets.MC_GITHUB_TOKEN }} --from-tag ${{ steps.previous_release.outputs.VERSION }} release
+          python -m gen3git --github-access-token ${{ secrets.MC_GITHUB_TOKEN }} --from-tag ${{ steps.previous_release.outputs.VERSION }} gen --markdown
