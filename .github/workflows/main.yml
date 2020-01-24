@@ -22,7 +22,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v1
         with:
-          ref: master      
+          ref: develop      
       - name: Install Gen3 release-helper
         run: |
           pip install wheel
