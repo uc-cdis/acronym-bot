@@ -1,9 +1,9 @@
-name: Hello Testing
-# This workflow is triggered on pushes to the repository.
-on: 
-  push:
-    tags:
-    - '*'
+name: Release awesomeness
+
+on:
+  pull_request:
+    types:
+      - closed
 
 jobs:
   build-and-run:
