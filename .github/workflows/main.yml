@@ -10,6 +10,21 @@ jobs:
     name: Build and Run
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Echo
-        run: echo "meh meh test"
+      - name: Identify previous release
+        id: previous_release
+        run: echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
+      - name: Bump release version
+        id: bump_version
+        uses: christian-draeger/increment-semantic-version@1.0.0
+        with:
+          current-version: ${{ steps.previous_release.outputs.VERSION }}
+          version-fragment: 'bug'
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        with:
+          ref: chore/test
+      - name: Install Gen3 release-helper
+        run: |
+          pip install wheel
+          pip install --user --editable git+https://github.com/uc-cdis/release-helper.git@master#egg=gen3git
+          python -m gen3git tag ${{ steps.bump_version.outputs.next-version }}
