@@ -10,6 +10,12 @@ jobs:
     name: Build and Run
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v1
+        with:
+          ref: develop      
+      - name: fix remote
+        run: git remote set-url origin https://github.com/uc-cdis/acronym-bot.git
       - name: Identify previous release
         id: previous_release
         run: |
@@ -21,12 +27,6 @@ jobs:
         with:
           current-version: ${{ steps.previous_release.outputs.VERSION }}
           version-fragment: 'bug'
-      - name: Checkout repo
-        uses: actions/checkout@v1
-        with:
-          ref: develop      
-      - name: fix remote
-        run: git remote set-url origin https://github.com/uc-cdis/acronym-bot.git
       - name: Install Gen3 release-helper
         run: |
           pip install wheel
