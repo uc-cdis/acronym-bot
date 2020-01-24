@@ -14,13 +14,12 @@ jobs:
         uses: actions/github-script@0.2.0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            return context.payload.ref.replace(/\/refs\/tags\//, '');
+        run: echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
       - name: Bump release version
         id: bump_version
         uses: christian-draeger/increment-semantic-version@1.0.0
         with:
-          current-version: ${{ steps.previous_release.outputs.result }}
+          current-version: ${{ steps.previous_release.outputs.VERSION }}
           version-fragment: 'feature'
       - name: Install Gen3 release-helper
         run: |
