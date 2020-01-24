@@ -30,3 +30,5 @@ jobs:
           pip install wheel
           pip install --user --editable git+https://github.com/uc-cdis/release-helper.git@master#egg=gen3git
           python -m gen3git --github-access-token ${{ secrets.MC_GITHUB_TOKEN }} tag ${{ steps.bump_version.outputs.next-version }}
+          python -m gen3git --github-access-token ${{ secrets.MC_GITHUB_TOKEN }} --from-tag ${{ steps.previous_release.outputs.VERSION }} release
+          python -m gen3git --github-access-token ${{ secrets.MC_GITHUB_TOKEN }} --from-tag ${{ steps.previous_release.outputs.VERSION }} gen --markdown
