@@ -10,27 +10,24 @@ jobs:
     name: Build and Run
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v1
-        with:
-          ref: develop      
+      - uses: actions/checkout@v1
+      - name: 'Get Previous tag'
+        id: previoustag
+        uses: "WyriHaximus/github-action-get-previous-tag@master"
+        env:
+          GITHUB_TOKEN: "${{ secrets.MC_GITHUB_TOKEN }}"
       - name: fix remote
         run: git remote set-url origin https://github.com/uc-cdis/acronym-bot.git
-      - name: Identify previous release
-        id: previous_release
-        run: |
-          echo $GITHUB_REF
-          echo ::set-output name=VERSION::$(ls -t1 .git/refs/tags |  head -n 1)
       - name: Bump release version
         id: bump_version
         uses: christian-draeger/increment-semantic-version@1.0.0
         with:
-          current-version: ${{ steps.previous_release.outputs.VERSION }}
+          current-version: ${{ steps.previoustag.outputs.tag }}
           version-fragment: 'bug'
       - name: Install Gen3 release-helper
         run: |
           pip install wheel
           pip install --user --editable git+https://github.com/uc-cdis/release-helper.git@master#egg=gen3git
           python -m gen3git --github-access-token ${{ secrets.MC_GITHUB_TOKEN }} tag ${{ steps.bump_version.outputs.next-version }}
-          python -m gen3git --github-access-token ${{ secrets.MC_GITHUB_TOKEN }} --from-tag ${{ steps.previous_release.outputs.VERSION }} release
-          python -m gen3git --github-access-token ${{ secrets.MC_GITHUB_TOKEN }} --from-tag ${{ steps.previous_release.outputs.VERSION }} gen --markdown
+          python -m gen3git --github-access-token ${{ secrets.MC_GITHUB_TOKEN }} --from-tag ${{ steps.previoustag.outputs.tag }} release
+          python -m gen3git --github-access-token ${{ secrets.MC_GITHUB_TOKEN }} --from-tag ${{ steps.previoustag.outputs.tag }} gen --markdown
