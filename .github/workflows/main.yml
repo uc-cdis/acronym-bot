@@ -9,6 +9,7 @@ jobs:
   build-and-run:
     name: Build and Run
     runs-on: ubuntu-latest
+    if: contains( github.event.pull_request.labels.*.name, 'release')
     steps:
       - uses: actions/checkout@v1
       - name: 'Get Previous tag'
