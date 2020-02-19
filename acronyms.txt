@@ -57,6 +57,7 @@
 	"ITS": "Information Technology Services at UChicago",
 	"KCBD": "Knapp Center for Biomedical Discovery at UChicago",
 	"LARA": "La Rabida Children’s Hospital & Research Center",
+        "MAVERIC": "Massachusetts Veterans Epidemiology Research and Information Center",
 	"MJFF": "Michael J Fox Foundation",
 	"NIAD": "National Institute of Allergy and Infectious Diseases",
 	"NDE": "NIAID Data Ecosystem",
