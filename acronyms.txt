@@ -55,6 +55,7 @@
 	"ISB-CGC": "Institute for Systems Biology Cancer Genomics Cloud",
 	"ITM": "Institute for Translational Medicine at UChicago",
 	"ITS": "Information Technology Services at UChicago",
+        "JCOIN": "Justice Community Opioid Innovation Network",
 	"KCBD": "Knapp Center for Biomedical Discovery at UChicago",
 	"LARA": "La Rabida Children’s Hospital & Research Center",
         "MAVERIC": "Massachusetts Veterans Epidemiology Research and Information Center",
