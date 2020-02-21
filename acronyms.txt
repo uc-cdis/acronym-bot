@@ -76,6 +76,7 @@
 	"OCC": "Open Commons Consortium",
 	"OCCPR": "Office of Cancer Clinical Proteomics Research",
 	"OICR": "Ontario Institute for Cancer Research",
+        "OMOP": "Observational Medical Outcomes Partnership",
 	"OSDC": "Open Science Data Cloud",
 	"PCAWG": "PanCancer Analysis of Whole Genomes",
 	"PDC": "(Bionimbus) Protected Data Cloud or Proteomic Data Commons (a data node of the NCI CRDC)",
