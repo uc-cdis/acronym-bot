@@ -87,7 +87,7 @@
 	"PIN": "Personal Identification Number",
 	"PIV": "Personal Identity Verification",
 	"PIA": "Privacy Impact Assessment",
-        "RAS": "Researcher Auth Service, NIH",
+	"RAS": "Researcher Auth Service, NIH",
 	"RCC": "Research Computing Center at UChicago",
 	"RFP": "Request for proposal",
 	"SBG": "Seven Bridges Genomics",
