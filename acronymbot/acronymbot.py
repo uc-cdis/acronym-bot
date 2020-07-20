@@ -15,7 +15,7 @@ rtmclient = slack.RTMClient(
 
 
 @slack.RTMClient.run_on(event='message')
-def find_acronym(payload):
+def find_acronym(**payload):
     data = payload['data']
     log.debug('### DATA: {}'.format(data))
     if 'subtype' not in data.keys():
