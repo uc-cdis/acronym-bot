@@ -7,7 +7,7 @@ import json
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger(__name__)
 
-slack_token = os.environ["SLACK_API_TOKEN"]
+slack_token = os.environ['SLACK_API_TOKEN']
 # override base_url to use whitelisted domain
 rtmclient = slack.RTMClient(
     token=slack_token.strip(), base_url='https://cdis.slack.com/api/'
@@ -15,7 +15,7 @@ rtmclient = slack.RTMClient(
 
 
 @slack.RTMClient.run_on(event='message')
-def find_acronym(**payload):
+def find_acronym(payload):
     data = payload['data']
     log.debug('### DATA: {}'.format(data))
     if 'subtype' not in data.keys():
