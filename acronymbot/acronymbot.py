@@ -35,13 +35,14 @@ e.g., @acronym-bot expand CDIS
                 user = data['user']
 
                 # need to point to raw data in the develop branch (latest acronyms)
-                contents_url = "https://api.github.com/repos/uc-cdis/acronym-bot/contents/acronyms.txt?branch=develop"
+                contents_url = "https://api.github.com/repos/uc-cdis/acronym-bot/contents/acronyms.txt?ref=develop"
                 contents_url_info = requests.get(
                     contents_url,
                     headers={
                         "Authorization": "token {}".format(
                             os.environ['GITHUB_TOKEN'].strip()
-                        )
+                        ),
+                        "Accept": "application/vnd.github.v3+json",
                     },
                 ).json()
                 download_url = contents_url_info["download_url"]
