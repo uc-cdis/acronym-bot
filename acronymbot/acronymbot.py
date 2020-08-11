@@ -34,9 +34,32 @@ e.g., @acronym-bot expand CDIS
                 channel_id = data['channel']
                 user = data['user']
 
-                # need to point to raw data in the master branch once the fully automated CI is set up
-                link = "https://raw.githubusercontent.com/uc-cdis/acronym-bot/develop/acronyms.txt"
-                r = requests.get(link)
+                # need to point to raw data in the develop branch (latest acronyms)
+                contents_url = "https://api.github.com/repos/uc-cdis/acronym-bot/contents/acronyms.txt?branch=develop"
+                contents_url_info = requests.get(
+                    contents_url,
+                    headers={
+                        "Authorization": "token {}".format(
+                            os.environ['GITHUB_TOKEN'].strip()
+                        )
+                    },
+                ).json()
+                download_url = contents_url_info["download_url"]
+                r = requests.get(
+                    download_url,
+                    headers={
+                        "Authorization": "token {}".format(
+                            os.environ['GITHUB_TOKEN'].strip()
+                        )
+                    },
+                )
+                if r.status_code != 200:
+                    raise Exception(
+                        "Unable to get file acronyms.txt at `{}`: got code {}.".format(
+                            download_url[: download_url.index("token")],
+                            response.status_code,
+                        )
+                    )
                 acronyms = json.loads(r.text)
                 bot_reply = None
                 for k, v in acronyms.items():
