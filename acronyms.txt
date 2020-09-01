@@ -34,7 +34,7 @@
 	"DCC": "Data Coordinating Center",
 	"DCF": "Data Commons Framework",
 	"DCPPC": "Data Commons Pilot Phase Consortium",
-        "DIIRM": "Data Ingestion, Integration, and Release Management",	
+        "DIIRM": "Data Ingestion, Indexing Release and Management",	
         "DRC": "Data Resource Center, GMKF",
 	"DRS": "Data Repository Service, GA4GH",
 	"EBI": "European Bioinformatics Institute",
