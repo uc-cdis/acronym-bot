@@ -4,6 +4,7 @@
 	"ACCESS": "Adding Consortium ConstituEntS for Studies",
 	"ACCOuNT": "African American Cardiovascular pharmacogenetic CONsorTium",
 	"ALCHEMIST": "Adjuvant Lung Cancer Enrichment Marker Identification and Sequencing Trials",
+	"ANVIL": "Analysis, Visualization, and Informatics Lab-space",
 	"ATO": "Authority to Operate",
 	"AURA": "Automating Uniervsity-wide Research Administration, see https://aura.uchicago.edu/",
 	"AWG": "Analysis Working Group",
@@ -15,6 +16,7 @@
 	"BSLC": "Biological Sciences Learning Center",
 	"BPSB": "Bio-Psychological Research Building",
 	"CaDSR": "CAncer Data Standards Registry and Repository",
+	"CAN": "*C* atalyst (fka DataSTAGE), *A* NVIL, *N* CFS, an older scrum team name",
 	"CBIIT": "Center for Biomedical Informatics and Information Technology at National Cancer Institute",
 	"CBIS": "Chicago Biomedicine Information Services at UChicago",
 	"CDIS": "Center for Data Intensive Science at UChicago",
@@ -91,6 +93,7 @@
 	"OUD": "Opioid Use Disorder",
 	"PCAWG": "PanCancer Analysis of Whole Genomes",
 	"PDC": "(Bionimbus) Protected Data Cloud or Proteomic Data Commons (a data node of the NCI CRDC)",
+	"PlanX": "Team named for planning ten years in the future, team began working on Gen3 -- pronounced 'plan ten'",
 	"PFB": "Portable Format for Biomedical data",
 	"PHI": "Protected Health Information",
 	"PII": "Personal Identifiable Information",
@@ -117,6 +120,4 @@
 	"NSA": "*N* CFS, *S* TAGE, *A* NVIL",
 	"NCFS": "National Center for Forensic Science",
 	"STAGE": "Data Storage, Toolspace, Access, and analytics for biG-data Empowerment",
-	"ANVIL": "Analysis, Visualization, and Informatics Lab-space",
-	"CAN": "*C* atalyst (fka DataSTAGE), *A* NVIL, *N* CFS"
 }
