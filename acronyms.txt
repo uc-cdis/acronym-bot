@@ -1,5 +1,5 @@
 {
-	"3PAO": Third Party Assessment Organization (this is a FedRAMP specifici term)",
+	"3PAO": "Third Party Assessment Organization (this is a FedRAMP specifici term)",
 	"AAC": "Astronomy & Astrophysics Center",
 	"ACCESS": "Adding Consortium ConstituEntS for Studies",
 	"ACCOuNT": "African American Cardiovascular pharmacogenetic CONsorTium",
@@ -32,7 +32,7 @@
 	"CRI": "Center for Research Informatics at UChicago",
 	"CSOC": "Commons Services Operations Center",
 	"CTDS": "Center for Translational Data Science",
-	"CUI": Controlled Unclassified Information",
+	"CUI": "Controlled Unclassified Information",
 	"CVB": "Cohen Veteran’s Bioscience",
 	"CMG": "Centers for Mendelian Genomics",
 	"DACO": "Data Access Compliance Office at the International Cancer Genome Consortium",
@@ -119,5 +119,5 @@
         "VA": "US Department of Veterans Affairs",
 	"NSA": "*N* CFS, *S* TAGE, *A* NVIL",
 	"NCFS": "National Center for Forensic Science",
-	"STAGE": "Data Storage, Toolspace, Access, and analytics for biG-data Empowerment",
+	"STAGE": "Data Storage, Toolspace, Access, and analytics for biG-data Empowerment"
 }
