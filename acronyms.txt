@@ -121,5 +121,6 @@
         "VA": "US Department of Veterans Affairs",
 	"NSA": "*N* CFS, *S* TAGE, *A* NVIL",
 	"NCFS": "National Center for Forensic Science",
-	"STAGE": "Data Storage, Toolspace, Access, and analytics for biG-data Empowerment"
+	"STAGE": "Data Storage, Toolspace, Access, and analytics for biG-data Empowerment",
+        "WES": "Workflow Execution Services"
 }
