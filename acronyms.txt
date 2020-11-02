@@ -119,6 +119,8 @@
         "URA": "University Research Administration",
         "VPODC" : "Veterans Precision Oncology Data Commons",
         "VA": "US Department of Veterans Affairs",
+	"VNC": "Virtual Network Computing",
+	"VDI": "Virtual Desktop Infrastructure"
 	"NSA": "*N* CFS, *S* TAGE, *A* NVIL",
 	"NCFS": "National Center for Forensic Science",
 	"STAGE": "Data Storage, Toolspace, Access, and analytics for biG-data Empowerment",
