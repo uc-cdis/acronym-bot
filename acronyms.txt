@@ -85,6 +85,7 @@
 	"NIH": "National Institutes of Health",
 	"NCI": "NIH National Cancer Institute",
 	"NCIt": "NCI Thesaurus",
+	"NPCI": "NIH Cloud Platform Interoperability, see https://anvilproject.org/ncpi"
 	"NCRDC": "NCI Cancer Research Data Commons",
 	"NSF": "National Science Foundation",
 	"NCBI": "National Center for Biotechnology Information",
