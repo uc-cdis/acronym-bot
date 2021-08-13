@@ -37,6 +37,7 @@
 	"CVB": "Cohen Veteran’s Bioscience",
 	"CMG": "Centers for Mendelian Genomics",
 	"DACO": "Data Access Compliance Office at the International Cancer Genome Consortium",
+	"DTSTTCPW": "Do The Simplest Thing That Could Possibly Work",
 	"dbGaP": "database of Genotypes and Phenotypes",
 	"DCAM": "Duchossois Center for Advanced Medicine",
 	"DCC": "Data Coordinating Center",
